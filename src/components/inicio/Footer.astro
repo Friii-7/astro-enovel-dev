@@ -1,0 +1,125 @@
+---
+// Componente Footer - Pie de página
+---
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="/images/02-logo-enovel-15.png" alt="Enovel Logo" class="footer-logo-image">
+        </div>
+        <div class="footer-info">
+            <span class="footer-copyright">© 2025 Enovel</span>
+            <span class="footer-separator">|</span>
+            <a href="#politica-datos" class="footer-link">Política de tratamiento de datos</a>
+            <span class="footer-separator">-</span>
+            <span class="footer-contact">Contáctenos: 300 392 7909</span>
+            <span class="footer-separator">-</span>
+            <a href="mailto:info@enovel.com.co" class="footer-link">info@enovel.com.co</a>
+            <span class="footer-separator">-</span>
+            <span class="footer-rights">Todos Los derechos reservados</span>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Footer Styles */
+    .footer {
+        background: #010738;
+        padding: 2rem 2rem;
+        color: #ffffff;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        flex-shrink: 0;
+    }
+
+    .footer-logo-image {
+        height: 60px;
+        width: auto;
+        max-width: 200px;
+        filter: brightness(1);
+        transition: all 0.3s ease;
+    }
+
+    .footer-logo-image:hover {
+        filter: brightness(1.1);
+    }
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .footer-copyright,
+    .footer-contact,
+    .footer-rights {
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .footer-separator {
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .footer-link {
+        color: #ffffff;
+        text-decoration: underline;
+        font-weight: 400;
+        transition: all 0.3s ease;
+    }
+
+    .footer-link:hover {
+        color: #FA4517;
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .footer {
+            padding: 1.5rem 1rem;
+        }
+
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .footer-info {
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo-image {
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer-info {
+            font-size: 0.8rem;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .footer-separator {
+            display: none;
+        }
+    }
+</style> 

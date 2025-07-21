@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* Variables CSS personalizadas */
+:root {
+  --navbar-bg: #010738;
+  --primary-color: #ff6b35;
+  --white: #ffffff;
+  --text-primary: #333333;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Estilos del navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--navbar-bg);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: var(--transition);
+  border-top: 1px solid #333;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nav-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilos de botones */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.3);
+}
+
+.btn-primary:hover {
+  background: #e55a2b;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: none;
+}
+
+.btn-outline:hover {
+  color: var(--primary-color);
+}
+
+.btn-ch {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.3);
+}
+
+.btn-ch:hover {
+  background: #e55a2b;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu,
+  .nav-buttons {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .nav-container {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .logo-image {
+    height: 35px;
+  }
+}
