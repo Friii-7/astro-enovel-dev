@@ -7,7 +7,7 @@ const currentPath = Astro.url.pathname;
     <div class="nav-container">
         <!-- Logo -->
         <div class="nav-logo">
-            <a href="/" title="Enovel - Transformación Digital con IA y Microsoft 365">
+            <a href="/" title="Enovel - Transformación Digital con IA y Microsoft 365" data-page="home">
                 <img src="/images/02-logo-enovel-15.png" alt="Enovel Logo" class="logo-image">
             </a>
         </div>
@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
         <!-- Desktop Navigation Links -->
         <div class="nav-menu">
             <button class="btn-ch btn-chatgpt nav-btn">Al enovel</button>
-            <a href="/nosotros" class={`nav-link ${currentPath === '/nosotros' ? 'nav-link-active' : ''}`}>Nosotros</a>
+            <a href="/nosotros" class="nav-link" data-page="nosotros">Nosotros</a>
             <a href="#microsoft365" class="nav-link">Microsoft 365</a>
             <a href="#acronis" class="nav-link">Acronis</a>
             <a href="#testimonios" class="nav-link">Testimonios</a>
@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
         <div class="mobile-menu" id="mobile-menu-content">
             <div class="mobile-menu-links">
                 <button class="btn btn-chatgpt btn-mobile nav-btn-mobile">Al enovel</button>
-                <a href="/nosotros" class={`mobile-nav-link ${currentPath === '/nosotros' ? 'mobile-nav-link-active' : ''}`}>Nosotros</a>
+                <a href="/nosotros" class="mobile-nav-link" data-page="nosotros">Nosotros</a>
                 <a href="#microsoft365" class="mobile-nav-link">Microsoft 365</a>
                 <a href="#acronis" class="mobile-nav-link">Acronis</a>
                 <a href="#testimonios" class="mobile-nav-link">Testimonios</a>
@@ -205,10 +205,42 @@ const currentPath = Astro.url.pathname;
 </style>
 
 <script>
-    // Funcionalidad del menú móvil
+    // Funcionalidad del menú móvil y navegación activa
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuBtn = document.getElementById('mobile-menu');
         const mobileMenu = document.getElementById('mobile-menu-content');
+
+        // Función para actualizar el estado activo de la navegación
+        function updateActiveNavigation() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                const dataPage = link.getAttribute('data-page');
+                
+                // Remover clases activas
+                link.classList.remove('nav-link-active', 'mobile-nav-link-active');
+                
+                // Verificar si el enlace corresponde a la página actual
+                if (linkPath === currentPath || 
+                    (dataPage === 'nosotros' && currentPath === '/nosotros') ||
+                    (dataPage === 'home' && currentPath === '/')) {
+                    // Aplicar la clase correcta según el tipo de enlace
+                    if (link.classList.contains('nav-link')) {
+                        link.classList.add('nav-link-active');
+                    } else if (link.classList.contains('mobile-nav-link')) {
+                        link.classList.add('mobile-nav-link-active');
+                    }
+                }
+            });
+        }
+
+        // Actualizar navegación al cargar la página
+        updateActiveNavigation();
+
+        // Actualizar navegación cuando cambia la URL (para navegación SPA)
+        window.addEventListener('popstate', updateActiveNavigation);
 
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', function() {
@@ -224,6 +256,9 @@ const currentPath = Astro.url.pathname;
                         mobileMenuBtn.classList.remove('active');
                     }
                     mobileMenu.classList.remove('active');
+                    
+                    // Actualizar navegación activa después de un pequeño delay
+                    setTimeout(updateActiveNavigation, 100);
                 });
             });
         }
