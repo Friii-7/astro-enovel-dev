@@ -229,16 +229,20 @@ const currentPath = Astro.url.pathname;
                 // Verificar si el enlace corresponde a la página actual
                 let isActive = false;
                 
+                // Normalizar las rutas (remover barras finales)
+                const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+                const normalizedLinkPath = linkPath ? linkPath.replace(/\/$/, '') : '';
+                
                 // Para la página de inicio
-                if (dataPage === 'home' && (currentPath === '/' || currentPath === '')) {
+                if (dataPage === 'home' && (normalizedCurrentPath === '' || normalizedCurrentPath === '/')) {
                     isActive = true;
                 }
                 // Para la página nosotros
-                else if (dataPage === 'nosotros' && currentPath === '/nosotros') {
+                else if (dataPage === 'nosotros' && normalizedCurrentPath === '/nosotros') {
                     isActive = true;
                 }
                 // Verificación adicional por href
-                else if (linkPath === currentPath) {
+                else if (normalizedLinkPath === normalizedCurrentPath) {
                     isActive = true;
                 }
                 
