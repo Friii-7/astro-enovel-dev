@@ -1,0 +1,120 @@
+---
+// AI Session Component - Conceptual AI Diagram
+---
+
+<section class="ai-session">
+  <div class="container">
+    <div class="ai-diagram">
+      <!-- Left side - AI Agents -->
+      <div class="ai-agents">
+        <h2>Agentes de IA</h2>
+      </div>
+      
+             <!-- Central image -->
+       <div class="central-image">
+         <img src="/images/imageAi.png" alt="AI Diagram" class="ai-diagram-img" />
+       </div>
+      
+      <!-- Right side - Intelligent Solutions -->
+      <div class="intelligent-solutions">
+        <h2>Soluciones inteligentes</h2>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .ai-session {
+    background: url('/images/imageai2.png') center center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-session::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ai-diagram {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .ai-agents,
+  .intelligent-solutions {
+    text-align: center;
+  }
+
+  .ai-agents h2,
+  .intelligent-solutions h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }
+
+  .central-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .ai-diagram-img {
+    max-width: 100%;
+    height: auto;
+ 
+  }
+
+  .ai-diagram-img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ai-diagram {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .ai-agents h2,
+    .intelligent-solutions h2 {
+      font-size: 1.8rem;
+    }
+
+    .central-image {
+      max-width: 350px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .central-image {
+      max-width: 280px;
+    }
+  }
+</style>
