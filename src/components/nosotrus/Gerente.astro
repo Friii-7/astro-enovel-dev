@@ -3,53 +3,58 @@
 ---
 
 <section class="gerente-section">
-    <div class="gerente-container">
-        <div class="gerente-profile">
-            <div class="gerente-image-container">
-                <img src="/images/gerente.png" alt="David Álvarez - CEO y Gerente General" class="gerente-image">
-            </div>
-            <div class="gerente-info">
-                <h3 class="gerente-name">David Álvarez</h3>
-                <p class="gerente-title">CEO y gerente general</p>
-            </div>
-        </div>
-        <div class="gerente-divider"></div>
-        <div class="gerente-quote">
-            <h4 class="gerente-quote-title">Frase gerente general</h4>
-            <blockquote class="gerente-quote-text">
-                "Automatiza procesos en Microsoft 365, protege tu información con Acronis y transforma tu forma de trabajar con Inteligencia Artificial."
-            </blockquote>
-        </div>
+  <div class="gerente-container">
+    <div class="gerente-profile">
+      <div class="gerente-image-container">
+        <img
+          src="/images/gerente.png"
+          alt="David Álvarez - CEO y Gerente General"
+          class="gerente-image"
+        />
+      </div>
+      <div class="gerente-info">
+        <h3 class="gerente-name">David Álvarez</h3>
+        <p class="gerente-title">CEO y gerente general</p>
+      </div>
     </div>
+    <div class="gerente-divider"></div>
+    <div class="gerente-quote">
+      <h4 class="gerente-quote-title">Frase gerente general</h4>
+      <blockquote class="gerente-quote-text">
+        "Automatiza procesos en Microsoft 365, protege tu información con
+        Acronis y transforma tu forma de trabajar con Inteligencia Artificial."
+      </blockquote>
+    </div>
+  </div>
 </section>
 
 <style>
-/* Estilos para la sección del Gerente */
-.gerente-section {
+  /* Estilos para la sección del Gerente */
+  .gerente-section {
     background: #010738 !important;
     padding: 4rem 2rem !important;
     color: white !important;
     width: 100% !important;
     display: block !important;
-}
+  }
 
-.gerente-container {
+  .gerente-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 3rem;
     padding: 2rem 15rem;
-}
+  }
 
-.gerente-profile {
+  .gerente-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 200px;
-}
+  }
 
-.gerente-image-container {
+  .gerente-image-container {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -58,167 +63,168 @@
     justify-content: center;
     margin-bottom: 1rem;
     overflow: hidden;
-}
+  }
 
-.gerente-image {
+  .gerente-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-}
+  }
 
-.gerente-info {
+  .gerente-info {
     text-align: center;
-}
+  }
 
-.gerente-name {
+  .gerente-name {
     font-size: 1.25rem;
     font-weight: 700;
     margin: 0 0 0.5rem 0;
     color: white;
-}
+  }
 
-.gerente-title {
+  .gerente-title {
     font-size: 1rem;
     margin: 0;
     color: white;
     opacity: 0.9;
-}
+  }
 
-.gerente-divider {
+  .gerente-divider {
     width: 2px;
     height: 120px;
     background: white;
     margin: 0 2rem;
-}
+  }
 
-.gerente-quote {
+  .gerente-quote {
     flex: 1;
-}
+  }
 
-.gerente-quote-title {
+  .gerente-quote-title {
     font-size: 2rem;
     font-weight: 700;
     margin: 0 0 1.5rem 0;
     color: white;
-}
+  }
 
-.gerente-quote-text {
+  .gerente-quote-text {
     font-size: 1.3rem;
     line-height: 1.6;
     margin: 0;
     position: relative;
     padding-left: 3rem;
     color: white;
-}
+  }
 
-.gerente-quote-text::before {
+  .gerente-quote-text::before {
     content: '"';
     font-size: 4rem;
-    color: #ff6b35;
+    color: #fa4517;
     position: absolute;
     left: 0;
     top: -1rem;
     font-weight: 700;
-}
+  }
 
-.gerente-quote-text::after {
+  .gerente-quote-text::after {
     content: '"';
     font-size: 4rem;
-    color: #ff6b35;
+    color: #fa4517;
     position: absolute;
     right: -2rem;
     bottom: -2rem;
     font-weight: 700;
-}
+  }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
     .gerente-section {
-        padding: 3rem 1rem;
+      padding: 3rem 1rem;
     }
 
     .gerente-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        padding: 2rem 1rem;
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
     }
 
     .gerente-divider {
-        width: 80%;
-        height: 2px;
-        margin: 0;
+      width: 80%;
+      height: 2px;
+      margin: 0;
     }
 
     .gerente-quote-title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .gerente-quote-text {
-        font-size: 1.1rem;
-        padding-left: 2rem;
+      font-size: 1.1rem;
+      padding-left: 2rem;
     }
 
     .gerente-quote-text::before {
-        font-size: 3rem;
-        top: -0.5rem;
+      font-size: 3rem;
+      top: -0.5rem;
     }
 
     .gerente-quote-text::after {
-        font-size: 3rem;
-        right: -1rem;
-        bottom: -1.5rem;
+      font-size: 3rem;
+      right: -1rem;
+      bottom: -1.5rem;
     }
-}
+  }
 
-@media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     .gerente-section {
-        padding: 2rem 0.5rem;
+      padding: 2rem 0.5rem;
     }
 
     .gerente-container {
-        gap: 1.5rem;
-        padding: 1rem 0.5rem;
+      gap: 1.5rem;
+      padding: 1rem 0.5rem;
     }
 
     .gerente-image-container {
-        width: 100px;
-        height: 100px;
+      width: 100px;
+      height: 100px;
     }
 
     .gerente-image {
-        width: 80px;
-        height: 80px;
+      width: 80px;
+      height: 80px;
     }
 
     .gerente-name {
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
 
     .gerente-title {
-        font-size: 0.9rem;
+      font-size: 0.9rem;
     }
 
     .gerente-quote-title {
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
 
     .gerente-quote-text {
-        font-size: 1rem;
-        padding-left: 1.5rem;
+      font-size: 1rem;
+      padding-left: 1.5rem;
     }
 
     .gerente-quote-text::before {
-        font-size: 2.5rem;
-        top: -0.3rem;
+      font-size: 2.5rem;
+      top: -0.3rem;
     }
 
     .gerente-quote-text::after {
-        font-size: 2.5rem;
-        right: -0.5rem;
-        bottom: -1rem;
+      font-size: 2.5rem;
+      right: -0.5rem;
+      bottom: -1rem;
     }
-}
-</style> 
+  }
+</style>
+
