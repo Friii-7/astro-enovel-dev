@@ -215,17 +215,35 @@ const currentPath = Astro.url.pathname;
             const currentPath = window.location.pathname;
             const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
             
+            console.log('Current path:', currentPath); // Debug para Netlify
+            
             navLinks.forEach(link => {
                 const linkPath = link.getAttribute('href');
                 const dataPage = link.getAttribute('data-page');
+                
+                console.log('Link:', linkPath, 'Data page:', dataPage); // Debug
                 
                 // Remover clases activas
                 link.classList.remove('nav-link-active', 'mobile-nav-link-active');
                 
                 // Verificar si el enlace corresponde a la página actual
-                if (linkPath === currentPath || 
-                    (dataPage === 'nosotros' && currentPath === '/nosotros') ||
-                    (dataPage === 'home' && currentPath === '/')) {
+                let isActive = false;
+                
+                // Para la página de inicio
+                if (dataPage === 'home' && (currentPath === '/' || currentPath === '')) {
+                    isActive = true;
+                }
+                // Para la página nosotros
+                else if (dataPage === 'nosotros' && currentPath === '/nosotros') {
+                    isActive = true;
+                }
+                // Verificación adicional por href
+                else if (linkPath === currentPath) {
+                    isActive = true;
+                }
+                
+                if (isActive) {
+                    console.log('Setting active for:', linkPath); // Debug
                     // Aplicar la clase correcta según el tipo de enlace
                     if (link.classList.contains('nav-link')) {
                         link.classList.add('nav-link-active');
@@ -241,6 +259,16 @@ const currentPath = Astro.url.pathname;
 
         // Actualizar navegación cuando cambia la URL (para navegación SPA)
         window.addEventListener('popstate', updateActiveNavigation);
+        
+        // Para Netlify: actualizar también cuando se completa la carga
+        window.addEventListener('load', function() {
+            setTimeout(updateActiveNavigation, 100);
+        });
+        
+        // Para Netlify: actualizar cuando cambia la URL (navegación directa)
+        if (window.location.pathname) {
+            setTimeout(updateActiveNavigation, 200);
+        }
 
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', function() {
