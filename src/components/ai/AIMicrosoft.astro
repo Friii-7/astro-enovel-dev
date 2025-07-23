@@ -1,0 +1,226 @@
+---
+// Componente AIMicrosoft - Sección de IA con Microsoft 365
+---
+
+<section class="ai-microsoft-section">
+  <div class="ai-microsoft-header">
+    <h2 class="ai-microsoft-title">
+      ¿Qué obtienes al integrar IA con<br />
+      Microsoft 365?
+    </h2>
+  </div>
+
+  <!-- Sección de Beneficios de IA -->
+  <div class="beneficios-container">
+    <div class="beneficios-grid">
+      <!-- Card 1: Automatización -->
+      <div class="beneficio-card">
+        <div class="card-icon">
+          <img
+            src="/images/Vector.png"
+            alt="Automatización"
+            width="48"
+            height="48"
+          />
+        </div>
+        <p class="beneficio-descripcion">
+          Automatización inteligente de tareas repetitivas.
+        </p>
+      </div>
+
+      <!-- Card 2: Documentos -->
+      <div class="beneficio-card">
+        <div class="card-icon">
+          <img
+            src="/images/Frame.png"
+            alt="Documentos"
+            width="48"
+            height="48"
+          />
+        </div>
+        <p class="beneficio-descripcion">Crea documentos inteligentes</p>
+      </div>
+
+      <!-- Card 3: Colaboración -->
+      <div class="beneficio-card">
+        <div class="card-icon">
+          <img
+            src="/images/Frame-6.png"
+            alt="Colaboración"
+            width="48"
+            height="48"
+          />
+        </div>
+        <p class="beneficio-descripcion">Centraliza la colaboración</p>
+      </div>
+
+      <!-- Card 4: Decisiones -->
+      <div class="beneficio-card">
+        <div class="card-icon">
+          <img
+            src="/images/Vector-7.png"
+            alt="Decisiones"
+            width="48"
+            height="48"
+          />
+        </div>
+        <p class="beneficio-descripcion">Toma decisiones inteligentes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ai-microsoft-section {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(/images/Rectangle 54.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 0rem;
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 70vh;
+  }
+
+  .ai-microsoft-header {
+    text-align: left;
+    margin-bottom: 4rem;
+    max-width: 100%;
+    margin-left: 15rem;
+    margin-right: auto;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ai-microsoft-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #010738;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilos para la sección de Beneficios */
+  .beneficios-container {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 0 20px;
+  }
+
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .beneficio-card {
+    background: #fa4517;
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+  }
+
+  .beneficio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  }
+
+  .card-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .beneficio-descripcion {
+    font-size: 16px;
+    line-height: 1.4;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .ai-microsoft-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .ai-microsoft-title {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .beneficios-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .beneficio-card {
+      height: 180px;
+      padding: 1.5rem 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-microsoft-section {
+      padding: 3rem 1rem;
+    }
+
+    .ai-microsoft-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .beneficios-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .beneficio-card {
+      height: 160px;
+      padding: 1.5rem 1rem;
+    }
+
+    .beneficio-descripcion {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-microsoft-section {
+      padding: 2.5rem 0.8rem;
+    }
+
+    .ai-microsoft-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .beneficio-card {
+      height: 140px;
+      padding: 1.2rem 1rem;
+    }
+
+    .beneficio-descripcion {
+      font-size: 13px;
+    }
+  }
+</style>

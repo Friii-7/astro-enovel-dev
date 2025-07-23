@@ -1,0 +1,163 @@
+---
+// Componente AILista - Banner de contacto IA
+---
+
+<section class="ai-banner-section">
+  <div class="ai-banner-container">
+    <div class="ai-banner-content">
+      <h1 class="ai-banner-title">
+        ¿Listo para transformar tu productividad con IA?
+      </h1>
+      <div class="ai-banner-line"></div>
+      <p class="ai-banner-subtitle">Pongamonos en contacto</p>
+      <div class="ai-banner-buttons">
+        <button class="btn-primary"> Agendar una sesión sin costo </button>
+        <button class="btn-secondary"> Escribirle a un asesor </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ai-banner-section {
+    background: linear-gradient(rgba(1, 7, 56, 0.8), rgba(1, 7, 56, 0.8)),
+      url(/images/imageenovel1.png);
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;
+    padding: 9rem 10rem;
+    position: relative;
+    min-height: 49vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100vw;
+  }
+
+  .ai-banner-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .ai-banner-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+
+  .ai-banner-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .ai-banner-line {
+    width: 300px;
+    height: 2px;
+    background-color: white;
+    margin: 1rem auto;
+  }
+
+  .ai-banner-subtitle {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .ai-banner-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: #fa4517;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: #e6390c;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #e6390c;
+    border: 2px solid #e6390c;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #000000;
+    color: #e6390c;
+    transform: translateY(-2px);
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .ai-banner-section {
+      padding: 3rem 0;
+      min-height: 350px;
+    }
+
+    .ai-banner-title {
+      font-size: 2rem;
+    }
+
+    .ai-banner-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .ai-banner-buttons {
+      flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-banner-section {
+      padding: 2rem 0;
+      min-height: 300px;
+    }
+
+    .ai-banner-container {
+      padding: 0 1rem;
+    }
+
+    .ai-banner-title {
+      font-size: 1.8rem;
+    }
+
+    .ai-banner-subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>

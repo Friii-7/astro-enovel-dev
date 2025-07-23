@@ -9,25 +9,33 @@
       <div class="ai-agents">
         <h2>Agentes de IA</h2>
       </div>
-      
-             <!-- Central image -->
-       <div class="central-image">
-         <img src="/images/imageAi.png" alt="AI Diagram" class="ai-diagram-img" />
-       </div>
-      
+
+      <!-- Central image -->
+      <div class="central-image">
+        <img
+          src="/images/imageAi.png"
+          alt="AI Diagram"
+          class="ai-diagram-img"
+        />
+      </div>
+
       <!-- Right side - Intelligent Solutions -->
       <div class="intelligent-solutions">
         <h2>Soluciones inteligentes</h2>
       </div>
-
     </div>
   </div>
 </section>
 
 <style>
   .ai-session {
-    background: url('/images/imageai2.png') center center/cover no-repeat;
-    min-height: 100vh;
+    background: linear-gradient(rgba(1, 7, 56, 0.8), rgba(1, 7, 56, 0.8)),
+      url("/images/imageai2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,11 +96,6 @@
   .ai-diagram-img {
     max-width: 100%;
     height: auto;
- 
-  }
-
-  .ai-diagram-img:hover {
-    transform: scale(1.05);
   }
 
   /* Responsive Design */
