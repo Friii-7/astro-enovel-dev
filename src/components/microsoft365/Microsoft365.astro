@@ -66,4 +66,155 @@
     line-height: 1.7;
     margin-bottom: 3rem;
   }
+
+  .microsoft365-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    object-fit: contain;
+  }
+
+  /* iPad Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .microsoft365-section {
+      padding: 4rem 1.5rem;
+      min-height: calc(100vh - 60px);
+    }
+
+    .microsoft365-container {
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .microsoft365-content {
+      padding-right: 1.5rem;
+    }
+
+    .microsoft365-title {
+      font-size: 2.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .microsoft365-description {
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .microsoft365-image {
+      max-width: 450px;
+    }
+  }
+
+  /* Tablet Responsive Design */
+  @media screen and (max-width: 768px) {
+    .microsoft365-section {
+      padding: 3rem 1rem;
+      min-height: auto;
+    }
+
+    .microsoft365-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      text-align: center;
+    }
+
+    .microsoft365-content {
+      padding-right: 0;
+      order: 2;
+    }
+
+    .microsoft365-illustration {
+      order: 1;
+    }
+
+    .microsoft365-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .microsoft365-description {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .microsoft365-image {
+      max-width: 400px;
+    }
+  }
+
+  /* Móvil Responsive Design */
+  @media screen and (max-width: 480px) {
+    .microsoft365-section {
+      padding: 2.5rem 0.8rem;
+    }
+
+    .microsoft365-container {
+      gap: 2rem;
+    }
+
+    .microsoft365-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .microsoft365-description {
+      font-size: 0.95rem;
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .microsoft365-image {
+      max-width: 350px;
+    }
+  }
+
+  /* Móvil pequeño */
+  @media screen and (max-width: 375px) {
+    .microsoft365-section {
+      padding: 2rem 0.6rem;
+    }
+
+    .microsoft365-container {
+      gap: 1.8rem;
+    }
+
+    .microsoft365-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .microsoft365-description {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .microsoft365-image {
+      max-width: 300px;
+    }
+  }
+
+  /* Móvil muy pequeño */
+  @media screen and (max-width: 320px) {
+    .microsoft365-section {
+      padding: 1.8rem 0.5rem;
+    }
+
+    .microsoft365-container {
+      gap: 1.5rem;
+    }
+
+    .microsoft365-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .microsoft365-description {
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .microsoft365-image {
+      max-width: 280px;
+    }
+  }
 </style>
