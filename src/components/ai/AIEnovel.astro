@@ -44,7 +44,7 @@
     }
 
     .ai-title {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: 700;
         color: #010738;
         line-height: 1.2;
@@ -60,12 +60,10 @@
         margin-bottom: 3rem;
     }
 
-
-
     /* Illustration Styles */
     .ai-illustration {
         position: relative;
-        height: 500px;
+        height: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -83,12 +81,44 @@
         filter: contrast(1.1);
     }
 
+    /* iPad Responsive Design */
+    @media screen and (max-width: 1024px) {
+        .ai-section {
+            padding: 5rem 1.5rem;
+            min-height: 85vh;
+        }
+        
+        .ai-container {
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+        }
+        
+        .ai-content {
+            padding-right: 1.5rem;
+        }
+        
+        .ai-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.8rem;
+        }
+        
+        .ai-description {
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .ai-illustration {
+            height: 550px;
+        }
+    }
 
-
-    /* Responsive Design */
+    /* Tablet Responsive Design */
     @media screen and (max-width: 768px) {
         .ai-section {
             padding: 6rem 1rem 4rem 1rem;
+            min-height: 80vh;
+            top: 60px;
         }
         
         .ai-container {
@@ -99,11 +129,7 @@
         
         .ai-illustration {
             order: -1;
-            height: 300px;
-        }
-        
-        .ai-image {
-            margin-top: 51px;
+            height: 400px;
         }
         
         .ai-content {
@@ -117,12 +143,16 @@
         
         .ai-description {
             font-size: 1rem;
+            margin-bottom: 2rem;
         }
     }
 
+    /* Móvil Responsive Design */
     @media screen and (max-width: 480px) {
         .ai-section {
             padding: 5rem 0.5rem 3rem 0.5rem;
+            min-height: 75vh;
+            top: 50px;
         }
         
         .ai-container {
@@ -130,7 +160,7 @@
         }
         
         .ai-illustration {
-            height: 250px;
+            height: 300px;
         }
         
         .ai-title {
@@ -140,6 +170,61 @@
         
         .ai-description {
             font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    /* Móvil pequeño */
+    @media screen and (max-width: 375px) {
+        .ai-section {
+            padding: 4rem 0.5rem 2rem 0.5rem;
+            min-height: 70vh;
+            top: 40px;
+        }
+        
+        .ai-container {
+            gap: 1.5rem;
+        }
+        
+        .ai-illustration {
+            height: 250px;
+        }
+        
+        .ai-title {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .ai-description {
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    /* Móvil muy pequeño */
+    @media screen and (max-width: 320px) {
+        .ai-section {
+            padding: 3.5rem 0.3rem 1.5rem 0.3rem;
+            min-height: 65vh;
+            top: 30px;
+        }
+        
+        .ai-container {
+            gap: 1rem;
+        }
+        
+        .ai-illustration {
+            height: 200px;
+        }
+        
+        .ai-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+        
+        .ai-description {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
         }
     }
 </style> 
