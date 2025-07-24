@@ -1,0 +1,272 @@
+---
+// Componente 365cards con diseño exacto de la imagen
+---
+
+<section class="equipos-section">
+  <div class="equipos-header">
+    <h2 class="equipos-title">¿Que obtienes?</h2>
+    <p class="equipos-description">Automatiza procesos en Microsoft 365</p>
+  </div>
+
+  <!-- Grid de tarjetas Microsoft 365 -->
+  <div class="cards-grid">
+    <!-- Card 1: Correo profesional y seguro -->
+    <div class="microsoft-card">
+      <div class="card-image">
+        <img src="/images/Rectangle 89.png" alt="Correo profesional y seguro" />
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Correo profesional y seguro</h3>
+        <p class="card-description">Obtén 50 GB de buzón y una dirección personalizada con tu dominio.</p>
+      </div>
+    </div>
+
+    <!-- Card 2: Productividad desde cualquier lugar -->
+    <div class="microsoft-card">
+      <div class="card-image">
+        <img src="/images/Rectangle 90.png" alt="Productividad desde cualquier lugar" />
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Productividad desde cualquier lugar</h3>
+        <p class="card-description">Accede a las versiones web de Outlook, Word, Excel y más, sin instalar nada.</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Respaldo inteligente en la nube -->
+    <div class="microsoft-card">
+      <div class="card-image">
+        <img src="/images/Rectangle 91.png" alt="Respaldo inteligente en la nube" />
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Respaldo inteligente en la nube</h3>
+        <p class="card-description">Almacena, comparte y protege tus archivos con 1 TB en OneDrive.</p>
+      </div>
+    </div>
+
+    <!-- Card 4: Soporte experto siempre disponible -->
+    <div class="microsoft-card">
+      <div class="card-image">
+        <img src="/images/Rectangle 93.png" alt="Soporte experto siempre disponible" />
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Soporte experto siempre disponible</h3>
+        <p class="card-description">Nuestro equipo técnico te acompaña ante cualquier incidencia.</p>
+      </div>
+    </div>
+
+    <!-- Card 5: Gestión flexible de licencias -->
+    <div class="microsoft-card center-card">
+      <div class="card-image">
+        <img src="/images/Rectangle 94.png" alt="Gestión flexible de licencias" />
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">Gestión flexible de licencias</h3>
+        <p class="card-description">Agrega licencias en cualquier momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .equipos-section {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0.95)
+      ),
+      url("/images/imageai3.png");
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .equipos-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .equipos-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #010738;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+  }
+
+  .equipos-description {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #010738;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Grid de tarjetas - Layout 2x2 con quinta tarjeta centrada */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Estilos de las tarjetas - Sin bordes ni background */
+  .microsoft-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Sin background, sin bordes, sin sombras */
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .card-content {
+    width: 100%;
+    /* Sin padding adicional, texto alineado directamente debajo de la imagen */
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #010738;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .card-description {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #010738;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Quinta tarjeta centrada */
+  .center-card {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* Responsive para tablets */
+  @media screen and (max-width: 1024px) {
+    .equipos-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .equipos-title {
+      font-size: 3rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .equipos-description {
+      font-size: 17px;
+      margin: 1.5rem auto;
+    }
+
+    .cards-grid {
+      gap: 2.5rem;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Responsive para móviles */
+  @media screen and (max-width: 768px) {
+    .equipos-section {
+      padding: 3rem 1rem;
+    }
+
+    .equipos-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .equipos-description {
+      font-size: 16px;
+      margin: 1rem auto;
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0 0.5rem;
+    }
+
+    .center-card {
+      max-width: 100%;
+    }
+
+    .card-image {
+      margin-bottom: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Responsive para móviles pequeños */
+  @media screen and (max-width: 480px) {
+    .equipos-title {
+      font-size: 2rem;
+    }
+
+    .equipos-description {
+      font-size: 15px;
+    }
+
+    .cards-grid {
+      gap: 1.5rem;
+    }
+
+    .card-image {
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+    }
+
+    .card-description {
+      font-size: 0.85rem;
+    }
+  }
+</style> 
