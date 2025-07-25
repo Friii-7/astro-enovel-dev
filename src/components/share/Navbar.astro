@@ -19,7 +19,7 @@ const currentPath = Astro.url.pathname;
             <a href="/sharepoint" class="nav-link" data-page="sharepoint">Sharepoint</a>
             <a href="/microsoft365" class="nav-link" data-page="microsoft365">Microsoft 365</a>
             <a href="/acronis" class="nav-link" data-page="acronis">Acronis</a>
-            <a href="#testimonios" class="nav-link">Testimonios</a>
+            <a href="/testimonios" class="nav-link" data-page="testimonios">Testimonios</a>
         </div>
 
         <!-- Desktop Buttons -->
@@ -46,7 +46,7 @@ const currentPath = Astro.url.pathname;
             <a href="/sharepoint" class="mobile-nav-link" data-page="sharepoint">Sharepoint</a>
             <a href="/microsoft365" class="mobile-nav-link" data-page="microsoft365">Microsoft 365</a>
             <a href="/acronis" class="mobile-nav-link" data-page="acronis">Acronis</a>
-            <a href="#testimonios" class="mobile-nav-link">Testimonios</a>
+            <a href="/testimonios" class="mobile-nav-link" data-page="testimonios">Testimonios</a>
         </div>
         <div class="mobile-menu-buttons">
             <button class="btn btn-primary btn-mobile">Contactenos</button>
@@ -249,6 +249,10 @@ const currentPath = Astro.url.pathname;
                 }
                 // Para la página acronis
                 else if (dataPage === 'acronis' && normalizedCurrentPath === '/acronis') {
+                    isActive = true;
+                }
+                // Para la página testimonios
+                else if (dataPage === 'testimonios' && normalizedCurrentPath === '/testimonios') {
                     isActive = true;
                 }
                 // Verificación adicional por href
