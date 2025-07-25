@@ -1,0 +1,375 @@
+---
+// Protección Acronis.astro component
+// Componente que muestra la protección completa para Microsoft 365
+---
+
+<section class="proteccion-section">
+  <div class="proteccion-container">
+    <div class="proteccion-header">
+      <h1 class="proteccion-title">Protección completa para Microsoft 365</h1>
+      <p class="proteccion-subtitle">Automatiza procesos en Microsoft 365</p>
+    </div>
+
+    <div class="servicios-grid">
+      <!-- Exchange Online -->
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <img
+            src="/images/logoProAcro (3).png"
+            alt="Microsoft Exchange"
+            class="servicio-icon"
+          />
+          <h3 class="servicio-title">Backup para Microsoft Exchange Online</h3>
+        </div>
+        <ul class="servicio-list">
+          <li>Buzones</li>
+          <li>Mensajes de correo</li>
+          <li>Contactos</li>
+          <li>Adjuntos</li>
+          <li>Tareas</li>
+          <li>Calendario</li>
+        </ul>
+      </div>
+
+      <!-- Teams -->
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <img
+            src="/images/logoProAcro (2).png"
+            alt="Microsoft Teams"
+            class="servicio-icon"
+          />
+          <h3 class="servicio-title">Backup para Microsoft Teams</h3>
+        </div>
+        <ul class="servicio-list">
+          <li>Miembros</li>
+          <li>Canales</li>
+          <li>Buzones</li>
+          <li>Reuniones</li>
+          <li>Sitios de grupos</li>
+          <li>Conversaciones</li>
+        </ul>
+      </div>
+
+      <!-- OneDrive -->
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <img
+            src="/images/logoProAcro (1).png"
+            alt="Microsoft OneDrive"
+            class="servicio-icon"
+          />
+          <h3 class="servicio-title">
+            Backup para Microsoft OneDrive for Business
+          </h3>
+        </div>
+        <ul class="servicio-list">
+          <li>Archivos</li>
+          <li>Carpetas</li>
+          <li>Filtros de archivos (Por ejemplo, "back up *.docx")</li>
+        </ul>
+      </div>
+
+      <!-- SharePoint -->
+      <div class="servicio-card">
+        <div class="servicio-header">
+          <img
+            src="/images/logoProAcro (4).png"
+            alt="Microsoft SharePoint"
+            class="servicio-icon"
+          />
+          <h3 class="servicio-title">
+            Backup para Microsoft SharePoint Online
+          </h3>
+        </div>
+        <ul class="servicio-list">
+          <li>Colecciones de sitios</li>
+          <li>Sitios de grupos</li>
+          <li>Comunicaciones</li>
+          <li>Archivos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .proteccion-section {
+    background: linear-gradient(rgba(1, 7, 56, 0.95), rgba(1, 7, 56, 0.95)),
+      url("/images/Rectangle 48.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .proteccion-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .proteccion-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .proteccion-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .proteccion-subtitle {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .servicios-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: white;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .servicios-grid::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+
+  .servicio-card {
+    background: transparent;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: none;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    border: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .servicio-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .servicio-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    border-bottom: none;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .servicio-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .servicio-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a202c;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .servicio-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    border-radius: 8px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .servicio-list li {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    background: transparent;
+  }
+
+  .servicio-list li::before {
+    content: "•";
+    color: #ff6b35;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .servicio-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* iPad Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .proteccion-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .proteccion-title {
+      font-size: 2.2rem;
+    }
+
+    .proteccion-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .servicios-grid {
+      gap: 1.5rem;
+    }
+
+    .servicio-card {
+      padding: 1.5rem;
+    }
+
+    .servicio-title {
+      font-size: 1rem;
+    }
+
+    .servicio-list {
+      gap: 0.4rem 0.8rem;
+    }
+  }
+
+  /* Mobile Responsive Design */
+  @media screen and (max-width: 768px) {
+    .proteccion-section {
+      padding: 3rem 1rem;
+      min-height: auto;
+    }
+
+    .proteccion-header {
+      margin-bottom: 3rem;
+    }
+
+    .proteccion-title {
+      font-size: 1.8rem;
+    }
+
+    .proteccion-subtitle {
+      font-size: 1rem;
+    }
+
+    .servicios-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .servicio-card {
+      padding: 1.5rem;
+    }
+
+    .servicio-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.75rem;
+    }
+
+    .servicio-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .servicio-title {
+      font-size: 1rem;
+    }
+
+    .servicio-list {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+
+    .servicio-list li {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Small Mobile Responsive Design */
+  @media screen and (max-width: 480px) {
+    .proteccion-section {
+      padding: 2rem 0.5rem;
+    }
+
+    .proteccion-title {
+      font-size: 1.5rem;
+    }
+
+    .proteccion-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .servicio-card {
+      padding: 1.25rem;
+    }
+
+    .servicio-header {
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .servicio-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .servicio-title {
+      font-size: 0.95rem;
+    }
+
+    .servicio-list li {
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+</style>
