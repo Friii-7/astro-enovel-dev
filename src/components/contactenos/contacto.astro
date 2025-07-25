@@ -1,0 +1,282 @@
+---
+// Componente contacto - Formulario de contacto con diseño moderno
+---
+
+<section class="contacto-section">
+  <div class="contacto-container">
+    <div class="contacto-content">
+      <!-- Left side with text -->
+      <div class="contacto-left">
+        <h1 class="contacto-title">
+          ¿Quieres empezar tu transformación digital?
+        </h1>
+      </div>
+
+      <!-- Right side with contact form -->
+      <div class="contacto-right">
+        <div class="contacto-form-container">
+          <form class="contacto-form">
+            <div class="form-group">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-input"
+                placeholder="Value"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                class="form-input"
+                placeholder="Value"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="correo" class="form-label">Correo</label>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                class="form-input"
+                placeholder="Value"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="form-textarea"
+                placeholder="Value"
+                rows="4"
+                required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit"> Enviar </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contacto-section {
+    background: linear-gradient(rgba(1, 7, 56, 0.9), rgba(1, 7, 56, 0.9)),
+      url(/images/enovelcontacto.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacto-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  /* Left side styles */
+  .contacto-left {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacto-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Right side styles */
+  .contacto-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .contacto-form-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+  }
+
+  .form-submit {
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .form-submit:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+  }
+
+  .form-submit:active {
+    transform: translateY(0);
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .contacto-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contacto-left {
+      min-height: 300px;
+    }
+
+    .contacto-background {
+      border-radius: 20px;
+    }
+
+    .contacto-title {
+      font-size: 2rem;
+    }
+
+    .contacto-right {
+      padding: 2rem;
+    }
+
+    .contacto-form-container {
+      padding: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .contacto-container {
+      padding: 0 1rem;
+    }
+
+    .contacto-content {
+      min-height: auto;
+      padding: 2rem 0;
+    }
+
+    .contacto-left {
+      min-height: 250px;
+    }
+
+    .contacto-title {
+      font-size: 1.8rem;
+    }
+
+    .contacto-right {
+      padding: 1rem;
+    }
+
+    .contacto-form-container {
+      padding: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .contacto-title {
+      font-size: 1.5rem;
+    }
+
+    .contacto-form-container {
+      padding: 1rem;
+    }
+
+    .form-input,
+    .form-textarea {
+      padding: 0.6rem 0.8rem;
+    }
+
+    .form-submit {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+</style>

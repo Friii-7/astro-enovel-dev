@@ -1,0 +1,233 @@
+---
+// Componente contactenos - Sección de contacto principal
+---
+
+<section class="contactenos-section">
+  <div class="contactenos-container">
+    <div class="contactenos-content">
+      <div class="contactenos-text">
+        <h1 class="contactenos-title">
+          Trabaja inteligente, seguro y desde cualquier lugar
+        </h1>
+        <p class="contactenos-description">
+          Integramos <strong>Inteligencia Artificial</strong>, Microsoft 365, SharePoint y Acronis para que tu equipo trabaje mejor, desde cualquier lugar. Automatiza tareas, centraliza tu información, comunica con fluidez y protege tus datos con tecnología de vanguardia.
+        </p>
+        <div class="contactenos-buttons">
+          <button class="btn-schedule">
+            <i class="fas fa-calendar-alt btn-icon"></i>
+            Agendar una sesión
+          </button>
+          <button class="btn-whatsapp">
+            <i class="fab fa-whatsapp btn-icon"></i>
+            Contactar por whatsapp
+          </button>
+        </div>
+      </div>
+      <div class="contactenos-illustration">
+        <img src="/images/imagEnovel3.png" alt="Enovel Contact" class="contactenos-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contactenos-section {
+    background: white;
+    padding: 6rem 2rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .contactenos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .contactenos-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contactenos-text {
+    padding-right: 2rem;
+  }
+
+  .contactenos-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .contactenos-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .contactenos-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-schedule,
+  .btn-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 180px;
+    justify-content: center;
+  }
+
+  .btn-schedule {
+    background: #007bff;
+    color: white;
+  }
+
+  .btn-schedule:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  .btn-whatsapp {
+    background: #25d366;
+    color: white;
+  }
+
+  .btn-whatsapp:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+  }
+
+  .btn-icon {
+    flex-shrink: 0;
+  }
+
+  .contactenos-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contactenos-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+
+  /* Tablet (iPad) Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .contactenos-section {
+      padding: 4rem 2rem;
+    }
+
+    .contactenos-content {
+      gap: 3rem;
+    }
+
+    .contactenos-title {
+      font-size: 2.2rem;
+    }
+
+    .contactenos-description {
+      font-size: 1rem;
+    }
+
+    .contactenos-image {
+      max-width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .contactenos-section {
+      padding: 3rem 1.5rem;
+    }
+
+    .contactenos-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contactenos-text {
+      padding-right: 0;
+      text-align: center;
+    }
+
+    .contactenos-title {
+      font-size: 2rem;
+    }
+
+    .contactenos-buttons {
+      justify-content: center;
+    }
+
+    .contactenos-image {
+      max-width: 85%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .contactenos-section {
+      padding: 2rem 1rem;
+    }
+
+    .contactenos-title {
+      font-size: 1.8rem;
+    }
+
+    .contactenos-description {
+      font-size: 0.95rem;
+    }
+
+    .contactenos-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-schedule,
+    .btn-whatsapp {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+
+    .contactenos-image {
+      max-width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .contactenos-title {
+      font-size: 1.6rem;
+    }
+
+    .contactenos-description {
+      font-size: 0.9rem;
+    }
+
+    .btn-schedule,
+    .btn-whatsapp {
+      padding: 0.9rem 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .contactenos-image {
+      max-width: 75%;
+    }
+  }
+</style> 
