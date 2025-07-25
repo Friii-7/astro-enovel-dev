@@ -1,5 +1,5 @@
 ---
-// Componente contacto - Formulario de contacto con diseño moderno
+// Componente contacto - Formulario de contacto con diseño moderno y responsive
 ---
 
 <section class="contacto-section">
@@ -10,45 +10,61 @@
         <h1 class="contacto-title">
           ¿Quieres empezar tu transformación digital?
         </h1>
+        <p class="contacto-subtitle">
+          Conecta con nosotros y descubre cómo podemos ayudarte a optimizar tu negocio con tecnología de vanguardia.
+        </p>
       </div>
 
       <!-- Right side with contact form -->
       <div class="contacto-right">
         <div class="contacto-form-container">
           <form class="contacto-form">
-            <div class="form-group">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                class="form-input"
-                placeholder="Value"
-                required
-              />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-input"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  class="form-input"
+                  placeholder="Tu apellido"
+                  required
+                />
+              </div>
             </div>
 
             <div class="form-group">
-              <label for="apellido" class="form-label">Apellido</label>
-              <input
-                type="text"
-                id="apellido"
-                name="apellido"
-                class="form-input"
-                placeholder="Value"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="correo" class="form-label">Correo</label>
+              <label for="correo" class="form-label">Correo electrónico</label>
               <input
                 type="email"
                 id="correo"
                 name="correo"
                 class="form-input"
-                placeholder="Value"
+                placeholder="tu@email.com"
                 required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="empresa" class="form-label">Empresa (opcional)</label>
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                class="form-input"
+                placeholder="Nombre de tu empresa"
               />
             </div>
 
@@ -58,12 +74,17 @@
                 id="mensaje"
                 name="mensaje"
                 class="form-textarea"
-                placeholder="Value"
+                placeholder="Cuéntanos sobre tu proyecto..."
                 rows="4"
                 required></textarea>
             </div>
 
-            <button type="submit" class="form-submit"> Enviar </button>
+            <button type="submit" class="form-submit">
+              <span>Enviar mensaje</span>
+              <svg class="submit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -73,16 +94,17 @@
 
 <style>
   .contacto-section {
-    background: linear-gradient(rgba(1, 7, 56, 0.9), rgba(1, 7, 56, 0.9)),
+    background: linear-gradient(rgba(1, 7, 56, 0.95), rgba(1, 7, 56, 0.9)),
       url(/images/enovelcontacto.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 4rem 2rem;
+    background-attachment: fixed;
+    padding: 6rem 2rem;
     position: relative;
     max-width: 100vw;
     overflow-x: hidden;
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,9 +123,9 @@
   .contacto-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    gap: 4rem;
     align-items: center;
-    min-height: 80vh;
+    min-height: 70vh;
   }
 
   /* Left side styles */
@@ -111,17 +133,27 @@
     position: relative;
     height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    padding-right: 2rem;
   }
 
   .contacto-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: white;
-    text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  .contacto-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   /* Right side styles */
@@ -129,22 +161,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
+    padding: 2rem;
   }
 
   .contacto-form-container {
     background: white;
     padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .contacto-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .form-group {
@@ -154,7 +194,7 @@
   }
 
   .form-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #374151;
     margin-bottom: 0.25rem;
@@ -162,121 +202,181 @@
 
   .form-input,
   .form-textarea {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.25rem;
     border: 2px solid #e5e7eb;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1rem;
     transition: all 0.3s ease;
     background: white;
+    font-family: inherit;
   }
 
   .form-input:focus,
   .form-textarea:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #f97316;
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+    transform: translateY(-1px);
   }
 
   .form-textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
     font-family: inherit;
   }
 
   .form-submit {
-    background: #f97316;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 1.25rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
   }
 
   .form-submit:hover {
-    background: #ea580c;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.4);
   }
 
   .form-submit:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
   }
 
-  /* Responsive Design */
-  @media screen and (max-width: 1024px) {
-    .contacto-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .contacto-left {
-      min-height: 300px;
-    }
-
-    .contacto-background {
-      border-radius: 20px;
-    }
-
-    .contacto-title {
-      font-size: 2rem;
-    }
-
-    .contacto-right {
-      padding: 2rem;
-    }
-
-    .contacto-form-container {
-      padding: 2rem;
-    }
+  .submit-icon {
+    transition: transform 0.3s ease;
   }
 
+  .form-submit:hover .submit-icon {
+    transform: translateX(3px);
+  }
+
+  /* Responsive Design - Siguiendo el patrón del proyecto */
   @media screen and (max-width: 768px) {
+    .contacto-section {
+      padding: 6rem 1rem 4rem 1rem;
+      margin-top: 51px;
+    }
+
     .contacto-container {
       padding: 0 1rem;
     }
 
     .contacto-content {
-      min-height: auto;
-      padding: 2rem 0;
-    }
-
-    .contacto-left {
-      min-height: 250px;
-    }
-
-    .contacto-title {
-      font-size: 1.8rem;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
     }
 
     .contacto-right {
+      order: -1;
       padding: 1rem;
     }
 
-    .contacto-form-container {
-      padding: 1.5rem;
+    .contacto-left {
+      padding-right: 0;
+      align-items: center;
+      min-height: auto;
     }
-  }
 
-  @media screen and (max-width: 480px) {
     .contacto-title {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contacto-subtitle {
+      font-size: 1rem;
     }
 
     .contacto-form-container {
-      padding: 1rem;
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    .contacto-form {
+      text-align: left;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
     .form-input,
     .form-textarea {
-      padding: 0.6rem 0.8rem;
+      padding: 0.875rem 1rem;
+      border-radius: 10px;
     }
 
     .form-submit {
-      padding: 0.8rem 1.5rem;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .contacto-section {
+      padding: 5rem 0.5rem 3rem 0.5rem;
+      margin-top: 51px;
+    }
+
+    .contacto-container {
+      padding: 0 0.5rem;
+    }
+
+    .contacto-content {
+      gap: 2rem;
+    }
+
+    .contacto-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .contacto-subtitle {
+      font-size: 0.95rem;
+    }
+
+    .contacto-form-container {
+      padding: 1.5rem;
+      border-radius: 16px;
+    }
+
+    .contacto-form {
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .form-input,
+    .form-textarea {
+      padding: 0.75rem 0.875rem;
+      font-size: 0.95rem;
+    }
+
+    .form-textarea {
+      min-height: 100px;
+    }
+
+    .form-submit {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.95rem;
+      gap: 0.5rem;
+    }
+
+    .submit-icon {
+      width: 18px;
+      height: 18px;
     }
   }
 </style>
