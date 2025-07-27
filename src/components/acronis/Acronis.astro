@@ -74,13 +74,16 @@
   /* iPad Responsive Design */
   @media screen and (max-width: 1024px) {
     .acronis-section {
-      padding: 4rem 1.5rem;
+      padding: 8rem 1.5rem 4rem 1.5rem;
       min-height: calc(100vh - 60px);
+      align-items: flex-start;
+      padding-top: 120px;
     }
 
     .acronis-container {
       gap: 3rem;
       grid-template-columns: 1fr 1fr;
+      margin-top: 2rem;
     }
 
     .acronis-content {
@@ -101,14 +104,17 @@
   /* Mobile Responsive Design */
   @media screen and (max-width: 768px) {
     .acronis-section {
-      padding: 3rem 1rem;
+      padding: 6rem 1rem 3rem 1rem;
       min-height: auto;
+      align-items: flex-start;
+      padding-top: 100px;
     }
 
     .acronis-container {
       grid-template-columns: 1fr;
       gap: 2rem;
       text-align: center;
+      margin-top: 1.5rem;
     }
 
     .acronis-content {
@@ -139,11 +145,14 @@
   /* Small Mobile Responsive Design */
   @media screen and (max-width: 480px) {
     .acronis-section {
-      padding: 2rem 0.5rem;
+      padding: 5rem 0.5rem 2rem 0.5rem;
+      align-items: flex-start;
+      padding-top: 80px;
     }
 
     .acronis-container {
       gap: 1.5rem;
+      margin-top: 1rem;
     }
 
     .acronis-title {
