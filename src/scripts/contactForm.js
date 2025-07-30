@@ -73,7 +73,7 @@ function showMessage(message, type) {
   // Add styles
   messageElement.style.cssText = `
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 4px;
     margin-top: 1rem;
     font-weight: 500;
     text-align: center;
