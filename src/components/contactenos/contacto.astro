@@ -1,5 +1,6 @@
 ---
 // Componente contacto - Formulario de contacto con diseño moderno y responsive
+import { initializeContactForm } from '../../scripts/contactForm.js';
 ---
 
 <section class="contacto-section">
@@ -380,3 +381,14 @@
     }
   }
 </style>
+
+<script>
+  // Initialize contact form functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    import('../../scripts/contactForm.js').then(module => {
+      module.initializeContactForm();
+    }).catch(error => {
+      console.error('Error loading contact form script:', error);
+    });
+  });
+</script>

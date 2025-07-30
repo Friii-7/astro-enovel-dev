@@ -1,0 +1,16 @@
+rules_version='2'
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow write access to contactosenovel collection for form submissions
+    match /contactosenovel/{document} {
+      allow write: if true;  // Allows anyone to submit contact forms
+      allow read: if false;  // No one can read contact data (for privacy)
+    }
+    
+    // Default rule for other collections (if any)
+    match /{document=**} {
+      allow read, write: if false;  // Deny access to all other collections
+    }
+  }
+}
