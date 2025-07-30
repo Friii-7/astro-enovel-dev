@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Firebase Connection</title>
+</head>
+<body>
+    <h1>Test Firebase Connection</h1>
+    <button id="testBtn">Test Firebase Connection</button>
+    <div id="result"></div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Firebase configuration - Update with your actual config
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY_HERE",
+            authDomain: "contactosenovel.firebaseapp.com",
+            projectId: "contactosenovel",
+            storageBucket: "contactosenovel.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.getElementById('testBtn').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing connection...';
+
+            try {
+                const docRef = await addDoc(collection(db, "test"), {
+                    test: true,
+                    timestamp: serverTimestamp()
+                });
+                
+                resultDiv.innerHTML = `✅ Connection successful! Document ID: ${docRef.id}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ Error: ${error.message}<br>Code: ${error.code}`;
+                console.error('Firebase test error:', error);
+            }
+        });
+    </script>
+</body>
+</html> 

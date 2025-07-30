@@ -12,6 +12,8 @@ const db = getFirestore(app);
 // Function to save contact form data
 export async function saveContactForm(formData) {
   try {
+    console.log("Attempting to save form data:", formData);
+    
     const docRef = await addDoc(collection(db, "contactosenovel"), {
       nombre: formData.nombre,
       apellido: formData.apellido,
@@ -25,7 +27,20 @@ export async function saveContactForm(formData) {
     return { success: true, id: docRef.id };
   } catch (error) {
     console.error("Error adding document: ", error);
-    return { success: false, error: error.message };
+    console.error("Error code:", error.code);
+    console.error("Error message:", error.message);
+    
+    // Provide more specific error messages
+    let errorMessage = "Error al guardar el formulario";
+    if (error.code === 'permission-denied') {
+      errorMessage = "Error de permisos. Verifica la configuración de Firebase.";
+    } else if (error.code === 'unavailable') {
+      errorMessage = "Servicio no disponible. Intenta nuevamente.";
+    } else if (error.code === 'network-error') {
+      errorMessage = "Error de conexión. Verifica tu internet.";
+    }
+    
+    return { success: false, error: errorMessage };
   }
 }
 

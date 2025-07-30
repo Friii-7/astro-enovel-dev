@@ -73,7 +73,39 @@ Each form submission creates a document in the "contactosenovel" collection with
 - Consider adding CAPTCHA or other spam prevention measures
 
 ## Troubleshooting
-- Check browser console for JavaScript errors
-- Verify Firebase configuration is correct
-- Ensure Firestore Database is enabled
-- Check network connectivity 
+
+### Error: "Missing or insufficient permissions"
+If you get this error, follow these steps:
+
+1. **Deploy Firestore Rules:**
+   ```bash
+   firebase deploy --only firestore:rules
+   ```
+
+2. **Verify Firestore Database is Enabled:**
+   - Go to Firebase Console → Firestore Database
+   - If not enabled, click "Create database"
+   - Choose "Start in test mode"
+
+3. **Check Firebase Configuration:**
+   - Ensure your `firebase-config.js` has the correct credentials
+   - Verify the project ID matches your Firebase project
+
+4. **Test Connection:**
+   - Open `test-firebase.html` in your browser
+   - Update the Firebase config in the test file
+   - Click "Test Firebase Connection"
+
+### Common Issues:
+- **Firebase CLI not installed:** `npm install -g firebase-tools`
+- **Not logged in:** `firebase login`
+- **Wrong project:** `firebase use contactosenovel`
+- **Network issues:** Check internet connection
+- **CORS issues:** Ensure domain is authorized in Firebase Console
+
+### Debug Steps:
+1. Check browser console for detailed error messages
+2. Verify Firebase configuration is correct
+3. Ensure Firestore Database is enabled
+4. Check network connectivity
+5. Verify domain is authorized in Firebase Console → Authentication → Settings → Authorized domains 
