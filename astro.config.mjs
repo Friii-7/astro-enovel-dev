@@ -10,5 +10,8 @@ export default defineConfig({
   },
   redirects: {
     '/ia': '/AIEnovel'
+  },
+  typescript: {
+    strict: true
   }
 });
