@@ -14,7 +14,6 @@ export function initializeContactForm() {
       nombre: form.querySelector('#nombre').value.trim(),
       apellido: form.querySelector('#apellido').value.trim(),
       correo: form.querySelector('#correo').value.trim(),
-      empresa: form.querySelector('#empresa').value.trim(),
       mensaje: form.querySelector('#mensaje').value.trim()
     };
 
