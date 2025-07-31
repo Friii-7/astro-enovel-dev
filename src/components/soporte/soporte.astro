@@ -15,7 +15,7 @@
       <div class="faq-item collapsed">
         <div class="faq-question">
           <span class="faq-text">¿Como solicito soporte?</span>
-          <button class="faq-toggle" onclick="toggleFaq(this)">
+          <button class="faq-toggle" data-faq-toggle>
             <i class="fas fa-plus"></i>
           </button>
         </div>
@@ -34,7 +34,7 @@
       <div class="faq-item collapsed">
         <div class="faq-question">
           <span class="faq-text">¿Como solicito soporte?</span>
-          <button class="faq-toggle" onclick="toggleFaq(this)">
+          <button class="faq-toggle" data-faq-toggle>
             <i class="fas fa-plus"></i>
           </button>
         </div>
@@ -53,7 +53,7 @@
       <div class="faq-item expanded">
         <div class="faq-question">
           <span class="faq-text">¿Como solicito soporte?</span>
-          <button class="faq-toggle" onclick="toggleFaq(this)">
+          <button class="faq-toggle" data-faq-toggle>
             <i class="fas fa-times"></i>
           </button>
         </div>
@@ -88,21 +88,58 @@
 </section>
 
 <script>
+  // Función para manejar el toggle de FAQ
   function toggleFaq(button: HTMLButtonElement) {
     const faqItem = button.closest(".faq-item") as HTMLElement;
     const icon = button.querySelector("i") as HTMLElement;
+    
+    if (!faqItem || !icon) return;
 
     // Toggle expanded class
-    faqItem.classList.toggle("expanded");
-    faqItem.classList.toggle("collapsed");
-
-    // Change icon
-    if (faqItem.classList.contains("expanded")) {
-      icon.className = "fas fa-times";
-    } else {
+    const isExpanded = faqItem.classList.contains("expanded");
+    
+    if (isExpanded) {
+      faqItem.classList.remove("expanded");
+      faqItem.classList.add("collapsed");
       icon.className = "fas fa-plus";
+    } else {
+      faqItem.classList.remove("collapsed");
+      faqItem.classList.add("expanded");
+      icon.className = "fas fa-times";
     }
   }
+
+  // Inicializar cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', function() {
+    // Agregar event listeners a todos los botones de toggle
+    const toggleButtons = document.querySelectorAll('[data-faq-toggle]');
+    
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', function(this: HTMLButtonElement, e) {
+        e.preventDefault();
+        toggleFaq(this);
+      });
+    });
+  });
+
+  // También manejar clicks en toda la pregunta para mejor UX
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function(this: HTMLElement, e) {
+        // No ejecutar si se hizo click en el botón (ya se maneja arriba)
+        if ((e.target as HTMLElement).closest('.faq-toggle')) {
+          return;
+        }
+        
+        const button = this.querySelector('.faq-toggle') as HTMLButtonElement;
+        if (button) {
+          toggleFaq(button);
+        }
+      });
+    });
+  });
 </script>
 
 <style>
