@@ -6,19 +6,19 @@
     <div class="metrics-container">
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="metric-number" id="counter-1" data-target="15">0</div>
+                <div class="metric-number" id="counter-1" data-target="15">+0</div>
                 <div class="metric-label">Años de experiencia</div>
             </div>
             <div class="metric-card">
-                <div class="metric-number" id="counter-2" data-target="50">0</div>
+                <div class="metric-number" id="counter-2" data-target="50">+0</div>
                 <div class="metric-label">Clientes</div>
             </div>
             <div class="metric-card">
-                <div class="metric-number" id="counter-3" data-target="90">0</div>
+                <div class="metric-number" id="counter-3" data-target="90">+0</div>
                 <div class="metric-label">Proyectos</div>
             </div>
             <div class="metric-card">
-                <div class="metric-number" id="counter-4" data-target="100">0</div>
+                <div class="metric-number" id="counter-4" data-target="100">+0</div>
                 <div class="metric-label">Procesos digitalizados</div>
             </div>
         </div>
@@ -183,10 +183,10 @@
         function updateCounter() {
             start += increment;
             if (start < target) {
-                element.textContent = Math.floor(start).toString();
+                element.textContent = '+' + Math.floor(start).toString();
                 requestAnimationFrame(updateCounter);
             } else {
-                element.textContent = target.toString();
+                element.textContent = '+' + target.toString();
             }
         }
         
