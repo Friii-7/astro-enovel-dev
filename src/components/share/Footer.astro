@@ -10,7 +10,7 @@
             </a>
         </div>
         <div class="footer-info">
-            <span class="footer-copyright">© 2025 Enovel</span>
+            <span class="footer-copyright">© <span id="current-year"></span> Enovel</span>
             <span class="footer-separator">|</span>
             <a href="/politicas" class="footer-link">Política de tratamiento de datos</a>
             <span class="footer-separator">-</span>
@@ -124,4 +124,15 @@
             display: none;
         }
     }
-</style> 
+</style>
+
+<script>
+    // Actualizar el año automáticamente en el footer
+    document.addEventListener('DOMContentLoaded', function() {
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            const currentYear = new Date().getFullYear();
+            yearElement.textContent = currentYear.toString();
+        }
+    });
+</script> 
